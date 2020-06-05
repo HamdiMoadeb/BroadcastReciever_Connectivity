@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.dhaval2404.imagepicker.ImagePicker;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imageView;
@@ -25,7 +27,20 @@ public class MainActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imageview);
         textView = findViewById(R.id.textview);
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImagePicker.Companion.with(MainActivity.this)
+                        .crop()
+                        .compress(1024)
+                        .maxResultSize(1080, 1080)
+                        .start();
+            }
+        });
     }
+
+
 
     BroadcastReceiver broadcastReceiver= new BroadcastReceiver() {
         @Override
