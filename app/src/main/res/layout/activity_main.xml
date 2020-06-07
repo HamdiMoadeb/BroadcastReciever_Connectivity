@@ -14,7 +14,6 @@
         android:layout_height="150dp"
         android:id="@+id/imageview"
         android:layout_gravity="center"
-        android:visibility="gone"
         android:src="@drawable/noconnection"
         />
 
@@ -23,9 +22,8 @@
         android:layout_height="250dp"
         android:id="@+id/imageviewPicked"
         android:scaleType="fitXY"
-        android:layout_gravity="center"
         android:visibility="gone"
-        />
+        android:layout_gravity="center" />
 
 
     <Button

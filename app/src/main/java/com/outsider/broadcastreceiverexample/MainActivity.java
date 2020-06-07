@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         btnImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 ImagePicker.Companion.with(MainActivity.this)
                             .crop()
                             .compress(1024)
